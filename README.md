@@ -20,13 +20,19 @@ Backend service for the Learn with Jiji search & respond flow. It exposes a sing
    - `rag-101.pptx`
    - `rag-walkthrough.mp4`
 
+<!--
 ## Running (Backend)
+=======
+## Running
+>>>>>>> main -->
 ```bash
 npm run dev
 ```
 
+<!-- <<<<<<< codex/create-backend-service-for-jiji-tfayra
 ## Running (Frontend - React + Vite)
 ```bash
+
 cd client
 npm install
 npm run dev
@@ -43,6 +49,8 @@ npm run build
 
 The backend serves static files from `client/dist` after you build the frontend.
 
+=======
+>>>>>>> main -->
 ## API
 ### POST /ask-jiji
 **Request**
