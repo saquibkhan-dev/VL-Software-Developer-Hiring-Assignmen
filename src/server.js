@@ -4,6 +4,7 @@ import helmet from "helmet";
 import morgan from "morgan";
 import crypto from "crypto";
 import { createClient } from "@supabase/supabase-js";
+import path from "path";
 
 dotenv.config();
 
@@ -13,6 +14,9 @@ const port = process.env.PORT || 3000;
 app.use(helmet());
 app.use(express.json({ limit: "100kb" }));
 app.use(morgan("tiny"));
+
+const distPath = path.resolve(process.cwd(), "client", "dist");
+app.use(express.static(distPath));
 
 const supabaseUrl = process.env.SUPABASE_URL;
 const supabaseAnonKey = process.env.SUPABASE_ANON_KEY;
